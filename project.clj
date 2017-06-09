@@ -1,7 +1,7 @@
 (defproject clj-edf "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
+  :description "Clojure wrapper around EDF4J for working with European Data Format files"
 
-  :url "http://example.com/FIXME"
+  :url "https://github.com/andrew-nguyen/clj-edf"
 
   :license {:name "MIT License"
             :url  "https://opensource.org/licenses/MIT"}
