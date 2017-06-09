@@ -6,6 +6,10 @@ interacting with EDF (European Data Format) files
 ## Usage
 
 ```clojure
+[clj-edf "0.1.0-SNAPSHOT"]
+```
+
+```clojure
 (require '[clj-edf.core :as c])
 
 (let [f (c/parse "somefile.edf")
