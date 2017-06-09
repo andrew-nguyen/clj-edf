@@ -1,14 +1,24 @@
 # clj-edf
 
-A Clojure library designed to ... well, that part is up to you.
+A wrapper library around [EDF4J](https://github.com/MIOB/EDF4J) for
+interacting with EDF (European Data Format) files
 
 ## Usage
 
-FIXME
+```clojure
+(require '[clj-edf.core :as c])
+
+(let [f (c/parse "somefile.edf")
+      header (c/header f)
+      signal (c/signal f)]
+  (print (c/raw-subject-id header)) ; raw string corresponding to the subject id field
+  (print (c/physical-vales (c/signal signal))) ; vector of vectors of physical/physiological values
+  (print (-> signal c/signal c/physical-values first)) ; vector of physical values of first signal
+  )
+```
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Andrew Nguyen
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the MIT License
